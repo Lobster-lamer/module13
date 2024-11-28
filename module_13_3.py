@@ -11,11 +11,11 @@ dp = Dispatcher(storage=MemoryStorage())
 
 @dp.message(Command("start"))
 async def cmd_start(message: types.Message):
-    print('Привет! Я бот помогающий твоему здоровью.')
+    await message.answer('Привет! Я бот помогающий твоему здоровью.')
 
 @dp.message()
 async def any_other_message(message: types.Message):
-    print("Введите команду /start, чтобы начать общение.")
+    await message.answer("Введите команду /start, чтобы начать общение.")
 
 
 async def main():
